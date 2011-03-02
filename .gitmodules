@@ -1,0 +1,3 @@
+[submodule "vendor/smartsprites"]
+	path = vendor/smartsprites
+	url = git://github.com/carrotsearch/smartsprites.git
