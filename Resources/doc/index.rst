@@ -48,12 +48,36 @@ Add SmartspritesBundle to your application kernel
         );
     }
     
-   //or use the BundleLoader (see below)
-  
 
 Using DependencyInjection
 -------------------------
 
+
+::
+
+    $this->get('smartsprites');    //returns the spriter
+
+
+::
+
+    #app/config/config.yml
+    smartsprites:
+      class:      rs\SmartspritesBundle\Util\Spriter
+      input_dir:  %kernel.root_dir%/../web/css
+      suffix:     -sprites
+      output_dir: %kernel.root_dir%/../web/css
+      files:      []
+      
+
+
+Using the Command
+----------------
+
+::
+
+    # regenerate all sprites
+    $ app/console assets:sprites
+    
 
 TODO
 ----
